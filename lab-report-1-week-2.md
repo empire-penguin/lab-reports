@@ -1,5 +1,7 @@
 [Main Page](https://empire-penguin.github.io/empire-penguin/)
+
 ***
+
 Lab report 1
 ============
 
