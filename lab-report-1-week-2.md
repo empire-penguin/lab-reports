@@ -2,7 +2,7 @@
 
 ***
 
-Lab report 1
+Lab Report 1
 ============
 
 Remote Access and the File System.
@@ -33,9 +33,27 @@ If prompted with an ssh authenticity warning type `yes` and press enter to conti
 Part 3 Trying Some Commands
 ------------------------------
 
+Now that we can log into the school computers remotely let us now try sending some commands to the remote computer to execute. 
+
+Some commands we can try to use are
+* `cd ~`
+* `cd`
+* `ls -lat`
+* `ls -a`
+* `ls <directory>` where `<directory>` is `/home/linux/ieng6/cs15lwi22/cs15lwi22NAME`, where `NAME` is the ID found earlier. 
+* `cp /home/linux/ieng6/cs15lwi22/public/hello.txt ~/`
+* `cat /home/linux/ieng6/cs15lwi22/public/hello.txt` 
+* `exit`
+
+Here are some screenshots running different commands
+
+![VSCode](./images/commands-1.png)
+
+![VSCode](./images/commands-2.png)
 
 Part 4 Moving Files with `scp`
 ---------------------------------
+
 
 
 Part 5 Setting an SSH Key
