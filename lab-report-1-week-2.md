@@ -58,8 +58,8 @@ To test this command we will use the following test file called: `WhereAmI.java`
 ```
     // WhereAmI.java
     
-    Class WhereAmI {
-        public static void main(Strings[] args){
+    class WhereAmI {
+        public static void main(String[] args){
             System.out.println(System.getProperty("os.name"));
             System.out.println(System.getProperty("user.name"));
             System.out.println(System.getProperty("user.home"));
@@ -68,11 +68,17 @@ To test this command we will use the following test file called: `WhereAmI.java`
     }
 ```
 
-Then run the following command: `scp WhereAmI.java cs15lwiNAME@ucsd.edu:~/` where `NAME` is the ID found earlier. 
+Then run the following command: `scp WhereAmI.java cs15lwi22NAME@ieng6.ucsd.edu:~/` where `NAME` is the ID found earlier. 
 
 You will be greated with a response similar to what happened with the `ssh` command. Enter your password and watch as your file flies across the internet to the remote server. To verify your file reached its destination safely `ssh` back into UCSD's servers with the `ssh` command from **Part 2**.
 
+It should look something like this:
+![scp-success](./images/scp-success.png)
+
 Once connected, try to compile and run the file you sent from your computer using the normal java commands `java` and `javac`. 
+
+You should see something like:
+![java-success](./images/java-success.png)
 
 Part 5 Setting an SSH Key
 ----------------------------
@@ -96,3 +102,27 @@ After this is done you can `ssh` and `scp` without using a password! Here is wha
 
 Part 6 Optimizing Remote Running
 -----------------------------------
+
+Finally to wrap things up here are some other tips and tricks to make remote connecting better and even more efficient. 
+
+The best way I found of efficiently sending java files to the remote server was by writing a bash file called: `send.sh` containing the following:
+```
+#!bin/sh
+
+echo "Attempting to send $1.java to cs15lwi22$2@ieng6.ucsd.edu"
+
+if [ -f $(find $1.java -type f) ]
+then
+    scp $1.java cs15lwi22$2@ieng6.ucsd.edu:~/ 
+    ssh cs15lwi22$2@ieng6.ucsd.edu "javac $1.java; java $1"
+else
+    echo "Could not find file $1.java"
+fi
+```
+
+You can call this command in the following way `sh send.sh <FILE> <NAME>` Where if you had a file called `Class.java` wanting to send to student ID "`ret`", `<FILE>` would be `Class` and `<NAME>` would be `ret`. This would send the file called `Class.java` to the home directory found in `cs15lwi22ret@ieng6.ucsd.edu` and then both compile and run the java class file.
+
+Here are screen shots of that working:
+
+![wrap-up](./images/wrap-up.png)
+
