@@ -1,10 +1,15 @@
 [Main Page](https://empire-penguin.github.io/empire-penguin/)
-#Lab report 1
-##Remote Access and the File System.
+***
+Lab report 1
+============
+
+Remote Access and the File System.
+------------------------------------
 
 ***
 
-###Part 1 Installing VSCode
+Part 1 Installing VSCode
+------------------------
 
 To begin our coding journey we must first install an IDE also known as an Integrated Developer Environment. For this class we have choosen to use VSCode since it is supported on all major platforms and offers a wide range of extensions which can allow the user to do much more than just write code!
 
@@ -12,7 +17,8 @@ Get [VSCode](https://code.visualstudio.com/) installed by following along with t
 
 ![VSCode](./images/VSCode.png)
 
-###Part 2 Remotely Connecting
+Part 2 Remotely Connecting
+--------------------------
 
 Now that we have a working environment to write our code lets now tackle the issue of computing power. While my Macbook Pro is great for editing code, video, and even playing some games, it will be laughed out of a room if it ever had to train a neural network on large sets of data. That seems like too much of an interesting problem to just give up on to. The solution is to connect to the super computers which reside on UCSD's compass using an ssh command. 
 
@@ -22,13 +28,17 @@ If prompted with an ssh authenticity warning type `yes` and press enter to conti
 
 ![VSCode](./images/ssh.png)
 
-###Part 3 Trying Some Commands
+Part 3 Trying Some Commands
+------------------------------
 
 
-###Part 4 Moving Files with `scp`
+Part 4 Moving Files with `scp`
+---------------------------------
 
 
-###Part 5 Setting an SSH Key
+Part 5 Setting an SSH Key
+----------------------------
 
 
-###Part 6 Optimizing Remote Running
+Part 6 Optimizing Remote Running
+-----------------------------------
