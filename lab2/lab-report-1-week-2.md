@@ -122,6 +122,8 @@ fi
 
 You can call this command in the following way `sh send.sh <FILE> <NAME>` Where if you had a file called `Class.java` wanting to send to student ID "`ret`", `<FILE>` would be `Class` and `<NAME>` would be `ret`. This would send the file called `Class.java` to the home directory found in `cs15lwi22ret@ieng6.ucsd.edu` and then both compile and run the java class file.
 
+Doing this brought my keystokes down from 60 to 10!
+
 Here are screen shots of that working:
 
 ![wrap-up](./images/wrap-up.png)
