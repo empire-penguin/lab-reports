@@ -15,7 +15,7 @@ We began by forking the repo found [here](https://github.com/ucsd-cse15l-w22/mar
 test file is successfully parsed.
 
 The inital fork contained the following java and text files:
-[testfiles](./images/inital.png)
+![testfiles](./images/inital.png)
 
 And successfully created the output 
 ```
@@ -23,7 +23,7 @@ And successfully created the output
 ```
 We then created the following test files:
 
-[testfiles](./images/test-files.png)
+![testfiles](./images/test-files.png)
 
 After attempting to parse [test2-file.md](https://github.com/empire-penguin/markdown-parse/blob/ea4c83fbd96a476233b95048aa12cb38e3113395/test2-file.md) we recieved the following symptom:
 ```
@@ -37,5 +37,5 @@ Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
 This symptom was most probabily caused by an infinite loop in light of the out of memory error and 
 that the output took a substancial amount of time before throwing the error.
 
-[first-fix](./images/first-fix.png)
+![first-fix](./images/first-fix.png)
 
