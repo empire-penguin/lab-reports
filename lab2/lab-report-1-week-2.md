@@ -103,7 +103,8 @@ After this is done you can `ssh` and `scp` without using a password! Here is wha
 Part 6 Optimizing Remote Running
 -----------------------------------
 
-Finally to wrap things up here are some other tips and tricks to make remote connecting better and even more efficient. 
+Finally to wrap things up here are some other tips and tricks to make remote connecting better and even more efficient saving 
+time.
 
 The best way I found of efficiently sending java files to the remote server was by writing a bash file called: `send.sh` containing the following:
 ```
