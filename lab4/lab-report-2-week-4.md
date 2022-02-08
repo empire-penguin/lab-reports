@@ -17,7 +17,12 @@ test file is successfully parsed.
 The inital fork contained the following java and text files:
 ![testfiles](./images/inital.png)
 
-And successfully created the output 
+And after running the following commands:
+```
+$ javac -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:. MarkdownParseTest.java
+$ java -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:. org.junit.runner.JUnitCore MarkdownParseTest
+```
+Successfully created the output 
 ```
 [https://something.com, some-page.html]
 ```
@@ -29,7 +34,13 @@ We then created the following test files:
 
 ![testfiles](./images/test-files.png)
 
-After attempting to parse [`test2-file.md`](https://github.com/empire-penguin/markdown-parse/blob/ea4c83fbd96a476233b95048aa12cb38e3113395/test2-file.md) we recieved the following symptom:
+After attempting to parse [`test2-file.md`](https://github.com/empire-penguin/markdown-parse/blob/ea4c83fbd96a476233b95048aa12cb38e3113395/test2-file.md) by running the following commands:
+```
+$ javac -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:. MarkdownParseTest.java
+$ java -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:. org.junit.runner.JUnitCore MarkdownParseTest
+```
+
+we recieved the following symptom:
 ```
 Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
         at java.base/java.lang.StringLatin1.newString(StringLatin1.java:769)
@@ -56,7 +67,13 @@ parethesis came before the closing bracket.
 Second Bug, Symptom, and Fix
 ------------------------------------
 
-After solving the first problem we ran into another issue when trying to parce [`test3-file.md`](https://github.com/empire-penguin/markdown-parse/blob/main/test3-file.md) we recieved the following symptom:
+After solving the first problem we ran into another issue when trying to parce 
+[`test3-file.md`](https://github.com/empire-penguin/markdown-parse/blob/main/test3-file.md) by running the following commands:
+```
+$ javac -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:. MarkdownParseTest.java
+$ java -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:. org.junit.runner.JUnitCore MarkdownParseTest
+```
+We recieved the following symptom:
 
 ```
 Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
@@ -85,7 +102,13 @@ brackets exisitng in the document. The file which caused this bug is an example 
 Third Bug, Symptom, and Fix
 ------------------------------------
 
-After feeling good about solving the second bug, the third and final bug was a pain. We tried to parce [`test-file5.md`](https://github.com/empire-penguin/markdown-parse/blob/main/test-file5.md) where we recieved the following symptom:
+After feeling good about solving the second bug, the third and final bug was a pain. We tried to parce [`test-file5.md`](https://github.com/empire-penguin/markdown-parse/blob/main/test-file5.md) by running the following commands:
+```
+$ javac -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:. MarkdownParseTest.java
+$ java -cp lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar:. org.junit.runner.JUnitCore MarkdownParseTest
+```
+
+where we recieved the following symptom:
 
 ```
 java.lang.AssertionError: expected:<[]> but was:<[page.com]>
